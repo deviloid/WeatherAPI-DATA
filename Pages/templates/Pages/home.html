@@ -1,0 +1,33 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}
+WeatherAPI Data | {{weather.city}}
+{% endblock %}
+
+{% block body %}
+<div class="row" style="height: 59px">
+
+</div>
+<div class="row">
+    <main role="main" class="col-md-12 ml-sm-auto col-lg-12 pt-3 px-4 d-flex justify-content-center">
+
+        <div class="card" style="width: 30rem;">
+            <div class="card-body">
+                <div class="row">
+                    <div class='col-2 d-flex flex-column align-items-center'>
+                        <h1 class="display-6"><img src={{weather.icon}}></h1>
+                        <p class="card-text secondary">{{weather.description}}</p>
+                    </div>
+                    <div class='col-5 d-flex justify-content-center align-items-center'>
+                        <h1 class="display-6">{{weather.temperature}} °F</h1>
+                    </div>
+                    <div class='col-5 d-flex justify-content-center align-items-center'>
+                        <h1 class="display-6">{{weather.city}}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+{% endblock %}
